@@ -1,0 +1,7 @@
+# Credentials — never commit
+.claude.json
+.credentials.json
+*.pem
+*.key
+id_*
+hosts.yml

@@ -1,0 +1,14 @@
+[user]
+	signingkey = /Users/laku/.ssh/id_ed25519
+[commit]
+	gpgsign = true
+[gpg]
+	format = ssh
+[credential "https://github.com"]
+	helper =
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper =
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[credential]
+	helper = osxkeychain

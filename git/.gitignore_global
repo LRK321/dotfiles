@@ -1,0 +1,48 @@
+.DS_Store
+.idea
+# User-specific stuff
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
+
+# Generated files
+.idea/**/contentModel.xml
+
+# Sensitive or high-churn files
+.idea/**/dataSources/
+.idea/**/dataSources.ids
+.idea/**/dataSources.local.xml
+.idea/**/dataSources.xml
+.idea/**/dynamic.xml
+.idea/**/uiDesigner.xml
+.idea/**/dbnavigator.xml
+#
+#*.iml
+*.hi
+*.o
+.cabal-sandbox
+config.codekit
+.codekit-cache
+.haskell-code-explorer
+nimcache
+nimsuggest.log
+.stack-work
+.vscode
+.tcachedata
+.svn
+*.pyc
+*.pyo
+*.bak
+*.swp
+Godeps
+DerivedData
+venv
+
+# Go Workspaces
+go.work
+go.work.sum
+
+# delve builds
+go_build_*

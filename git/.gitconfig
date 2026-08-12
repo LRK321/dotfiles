@@ -1,0 +1,50 @@
+[user]
+	name = LRK321
+	email = lasse.kurz@gmx.de
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+[core]
+	excludesfile = ~/.gitignore_global
+	autocrlf = input
+	savecrlf = true
+	quotepath = false
+	editor = vi
+[merge]
+	tool = vimdiff
+[push]
+	default = simple
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = true
+[pull]
+	ff = only
+[init]
+	defaultBranch = main
+[submodule]
+	recurse = true
+[alias]
+	st = status -sb
+	ci = commit
+	cam = commit --amend
+	co = checkout
+	ac = !git add -A && git commit
+	cog = !sh -c "echo $(git branch | grep '$0' | head -1)"
+	br = branch
+	last = log -1 HEAD
+	find = "!git log --color -p -S "
+	com = !git checkout $(git branch --format '%(refname:short)' | grep main || echo master)
+	cleanup = !sh -c 'git remote prune origin && git branch --merged master | grep -v "\\* master" | grep -v wapi | xargs -n 1 git branch -d'
+	prune-all = !sh -c 'git remote | xargs -n1 git remote prune'
+	aa = add -A :/
+	show-rev-number = !sh -c 'git rev-list --reverse HEAD | nl | awk "{ if(\\$1 == "$0") { print \\$2 }}"'
+	tags = tag -l
+	branches = branch -a
+	remotes = remote -v
+	dc = diff --cached
+	grab = !sh -c 'git fetch origin && git checkout $0 && git reset origin/$0 --hard'
+# Include platform-specific overrides (file is silently skipped if missing)
+[include]
+	path = ~/.gitconfig.macos
